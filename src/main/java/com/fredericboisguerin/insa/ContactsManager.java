@@ -11,7 +11,7 @@ public class ContactsManager {
             throw new InvalidContactNameException();
         }else if(name == ""){
             throw new InvalidContactNameException();
-        }else if (email != null && (!(email.matches("\\w+[@]\\w+[.]\\w")))) {
+        }else if (email != null && (!(email.matches("\\w+[@]\\w+[.]\\w+")))) {
             throw new InvalidEmailException();
         }else{
             Contact newContact = new Contact(name, email, phoneNumber);
