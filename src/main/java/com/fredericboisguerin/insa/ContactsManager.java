@@ -7,9 +7,7 @@ public class ContactsManager {
     ArrayList<Contact> listContact = new ArrayList<Contact>();
 
     public void addContact(String name, String email, String phoneNumber) throws InvalidContactNameException,InvalidEmailException{
-        if(name == null){
-            throw new InvalidContactNameException();
-        }else if(name == ""){
+        if(name == null || name.isEmpty()){
             throw new InvalidContactNameException();
         }else if (email != null && (!(email.matches("\\w+[@]\\w+[.]\\w+")))) {
             throw new InvalidEmailException();
